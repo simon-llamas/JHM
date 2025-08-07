@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joy Healthy Massage</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; background-color: #faf7f2; color: #333; }
+  header { background-color: #d8b89c; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  header h1 { margin: 0; font-size: 1.5rem; color: #fff; }
+  nav a { margin-left: 1rem; color: #fff; text-decoration: none; }
+  .hero { text-align: center; padding: 3rem 1rem; background-color: #f1e7de; }
+  .hero h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+  .hero p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+  .hero button { background-color: #b46f4c; color: white; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; cursor: pointer; border-radius: 5px; }
+  section { padding: 2rem 1rem; max-width: 1000px; margin: auto; }
+  h3 { border-bottom: 2px solid #d8b89c; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+  .services { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; }
+  .service { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+  .about { background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 0 5px rgba(0,0,0,0.1); line-height: 1.6; }
+  .packages { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .package { background: #fff; padding: 1rem; border-radius: 8px; flex: 1; min-width: 250px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+  footer { text-align: center; padding: 1rem; background: #d8b89c; color: #fff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Joy Healthy Massage</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#packages">Deals</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+<section class="hero">
+  <h2>Relax, Rejuvenate, and Restore</h2>
+  <p>Traditional care with a personal touch in a calm, welcoming space.</p>
+  <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Book Now</button>
+</section>
+<section id="services">
+  <h3>Our Services</h3>
+  <div class="services">
+    <div class="service"><h4>Swedish Massage</h4><p>Gentle relaxation to reduce stress and tension.</p></div>
+    <div class="service"><h4>Deep Tissue Massage</h4><p>Focused work to relieve chronic muscle discomfort.</p></div>
+    <div class="service"><h4>Hot Stone Massage</h4><p>Warm stones to loosen muscles and enhance relaxation.</p></div>
+    <div class="service"><h4>Prenatal Massage</h4><p>Specialized care for expecting mothers to ease discomfort.</p></div>
+  </div>
+</section>
+<section id="about">
+  <h3>About Joy Healthy Massage</h3>
+  <div class="about">
+    <p>My name is Joy, and I began this practice after moving from China with a passion for sharing the benefits of massage therapy. Over the years, my small independent studio has become a local favorite for those seeking a genuine, caring touch. Whether you are here for relaxation or to address sore muscles, I focus on creating a warm, inviting experience that blends traditional techniques with attention to each client’s personal needs.</p>
+  </div>
+</section>
+<section id="packages">
+  <h3>Deals & Packages</h3>
+  <div class="packages">
+    <div class="package">
+      <h4>Series Packages</h4>
+      <p>Buy 5 massages, get 1 free. Ideal for regular self-care and wellness maintenance.</p>
+    </div>
+    <div class="package">
+      <h4>Gift Cards</h4>
+      <p>Physical and digital gift cards are available — the perfect gift for family, friends, or coworkers.</p>
+    </div>
+    <div class="package">
+      <h4>Prepaid Wellness Plan</h4>
+      <p>Pay upfront for 12 sessions in a year and save 15% on each visit.</p>
+    </div>
+  </div>
+</section>
+<section>
+  <h3>Extra Touches</h3>
+  <div class="about">
+    <p>When you arrive, you may notice a subtle calming scent — from the homemade massage candles I craft from natural ingredients. They set a serene mood right at the entrance and are also available for purchase in the studio.</p>
+  </div>
+</section>
+<section id="contact">
+  <h3>Contact & Booking</h3>
+  <div class="about">
+    <p><strong>Phone:</strong> (xxx) xxx-xxxx</p>
+    <p><strong>Address:</strong> [Street Address]</p>
+    <p>Email or call to book your appointment. Online booking coming soon.</p>
+  </div>
+</section>
+<footer>
+  <p>&copy; 2025 Joy Healthy Massage</p>
+</footer>
+</body>
+</html>
