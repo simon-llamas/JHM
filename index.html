@@ -3,89 +3,210 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Joy Healthy Massage</title>
+<title>Joy Healthy Massage – Fort Worth</title>
+<meta name="description" content="Joy Healthy Massage in Fort Worth, TX — traditional care with a personal touch. Swedish, deep tissue, hot stone, and prenatal massage. Gift cards & package deals." />
 <style>
-  body { font-family: Arial, sans-serif; margin: 0; background-color: #faf7f2; color: #333; }
-  header { background-color: #d8b89c; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
-  header h1 { margin: 0; font-size: 1.5rem; color: #fff; }
-  nav a { margin-left: 1rem; color: #fff; text-decoration: none; }
-  .hero { text-align: center; padding: 3rem 1rem; background-color: #f1e7de; }
-  .hero h2 { font-size: 2rem; margin-bottom: 0.5rem; }
-  .hero p { font-size: 1.1rem; margin-bottom: 1.5rem; }
-  .hero button { background-color: #b46f4c; color: white; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; cursor: pointer; border-radius: 5px; }
-  section { padding: 2rem 1rem; max-width: 1000px; margin: auto; }
-  h3 { border-bottom: 2px solid #d8b89c; padding-bottom: 0.5rem; margin-bottom: 1rem; }
-  .services { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; }
-  .service { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-  .about { background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 0 5px rgba(0,0,0,0.1); line-height: 1.6; }
-  .packages { display: flex; flex-wrap: wrap; gap: 1rem; }
-  .package { background: #fff; padding: 1rem; border-radius: 8px; flex: 1; min-width: 250px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-  footer { text-align: center; padding: 1rem; background: #d8b89c; color: #fff; }
+:root{
+  --bg:#faf7f2;
+  --ink:#2b2b2b;
+  --brand:#2d7938;
+  --brand-2:#d8b89c;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;background:var(--bg);color:var(--ink)}
+a{color:inherit}
+img{max-width:100%;display:block}
+
+/* Header */
+.header{background:var(--brand-2);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:800}
+.brand svg{width:36px;height:36px}
+nav a{color:#fff;text-decoration:none;margin-left:16px;font-weight:600}
+
+/* Buttons */
+.btn{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.outline{background:#fff;color:var(--brand);border:2px solid var(--brand)}
+
+/* Hero */
+.hero{position:relative;display:grid;align-items:center;min-height:56vh;background:#eef3ec;overflow:hidden}
+.hero-inner{z-index:2;max-width:960px;margin:0 auto;padding:56px 16px;text-align:center}
+.hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 10px}
+.hero p{max-width:740px;margin:0 auto 18px}
+.hero-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hero-badge{margin-top:12px}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.22;filter:saturate(0.9)}
+
+/* Layout */
+.container{max-width:1100px;margin:0 auto;padding:26px 16px}
+.section{margin:34px 0}
+h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px)}
+.divider{height:2px;background:var(--brand-2);opacity:.4;margin:12px 0 18px}
+.grid{display:grid;gap:16px}
+.grid.services{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid.gallery{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border-radius:14px;padding:16px;box-shadow:0 1px 6px rgba(0,0,0,.07)}
+.small{font-size:.95rem;color:#555}
+.packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.two-col{display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+@media (max-width:900px){.two-col{grid-template-columns:1fr}}
+
+/* Extras */
+.testi{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.star{letter-spacing:2px}
+.footer{background:var(--brand-2);color:#fff;text-align:center;padding:22px}
+.footer a{color:#fff;text-decoration:none}
+.sticky-cta{position:fixed;right:16px;bottom:16px;display:flex;gap:10px;z-index:30;flex-wrap:wrap}
+.map-embed{border:0;width:100%;height:320px;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.07)}
+.yelp-badge{display:flex;align-items:center;gap:10px}
+.benefits{margin:.6rem 0 0 1rem;padding:0}
+.benefits li{margin:.25rem 0}
+.badge{display:inline-block;background:#fff;color:#2d4538;border:1px solid #c9d6c5;padding:6px 10px;border-radius:999px;font-weight:700}
+.subtle{opacity:.9}
 </style>
 </head>
 <body>
-<header>
-  <h1>Joy Healthy Massage</h1>
+<header class="header">
+  <a class="brand" href="#top" aria-label="Joy Healthy Massage">
+    <!-- Inline leaf logo -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#e7f3ea"/>
+          <stop offset="1" stop-color="#bfe0c7"/>
+        </linearGradient>
+      </defs>
+      <rect x="6" y="6" width="84" height="84" rx="20" fill="url(#bg)"/>
+      <path d="M48 26c-1 18-3 24-3 44h6c0-20-2-26-3-44z" fill="#2d7938"/>
+      <path d="M45 48c-10-1-16 2-22 8 9 2 16 1 24-4 2-1 2-3-2-4z" fill="#2d7938"/>
+      <path d="M51 38c8-6 15-7 24-6-5 7-12 11-22 13-3 0-4-2-2-7z" fill="#2d7938"/>
+      <circle cx="48" cy="48" r="30" fill="none" stroke="#2d7938" stroke-opacity=".15" stroke-width="3"/>
+    </svg>
+    <span>Joy Healthy Massage</span>
+  </a>
   <nav>
     <a href="#services">Services</a>
     <a href="#about">About</a>
-    <a href="#packages">Deals</a>
+    <a href="#gallery">Photos</a>
+    <a href="#deals">Deals</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
-<section class="hero">
-  <h2>Relax, Rejuvenate, and Restore</h2>
-  <p>Traditional care with a personal touch in a calm, welcoming space.</p>
-  <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">Book Now</button>
-</section>
-<section id="services">
-  <h3>Our Services</h3>
-  <div class="services">
-    <div class="service"><h4>Swedish Massage</h4><p>Gentle relaxation to reduce stress and tension.</p></div>
-    <div class="service"><h4>Deep Tissue Massage</h4><p>Focused work to relieve chronic muscle discomfort.</p></div>
-    <div class="service"><h4>Hot Stone Massage</h4><p>Warm stones to loosen muscles and enhance relaxation.</p></div>
-    <div class="service"><h4>Prenatal Massage</h4><p>Specialized care for expecting mothers to ease discomfort.</p></div>
-  </div>
-</section>
-<section id="about">
-  <h3>About Joy Healthy Massage</h3>
-  <div class="about">
-    <p>My name is Joy, and I began this practice after moving from China with a passion for sharing the benefits of massage therapy. Over the years, my small independent studio has become a local favorite for those seeking a genuine, caring touch. Whether you are here for relaxation or to address sore muscles, I focus on creating a warm, inviting experience that blends traditional techniques with attention to each client’s personal needs.</p>
-  </div>
-</section>
-<section id="packages">
-  <h3>Deals & Packages</h3>
-  <div class="packages">
-    <div class="package">
-      <h4>Series Packages</h4>
-      <p>Buy 5 massages, get 1 free. Ideal for regular self-care and wellness maintenance.</p>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Relax, Rejuvenate, and Restore</h1>
+      <p>Traditional care with a personal touch in a calm, welcoming studio. Swedish, Deep Tissue, Hot Stone, and Prenatal massage.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="tel:+18177143333">Call Now</a>
+        <a class="btn outline" href="#deals">See Packages</a>
+      </div>
+      <div class="hero-badge"><span class="badge">5★ local favorite • Gift cards available</span></div>
     </div>
-    <div class="package">
-      <h4>Gift Cards</h4>
-      <p>Physical and digital gift cards are available — the perfect gift for family, friends, or coworkers.</p>
-    </div>
-    <div class="package">
-      <h4>Prepaid Wellness Plan</h4>
-      <p>Pay upfront for 12 sessions in a year and save 15% on each visit.</p>
-    </div>
+    <img class="hero-img" src="https://source.unsplash.com/1600x900/?massage,spa" alt="Massage studio ambience" />
+  </section>
+
+  <div class="container">
+    <section id="services" class="section">
+      <h2>Services</h2>
+      <div class="divider"></div>
+      <div class="grid services">
+        <article class="card">
+          <h3>Swedish Massage</h3>
+          <p class="small">Gentle, flowing techniques to reduce stress, calm the nervous system, and improve circulation.</p>
+        </article>
+        <article class="card">
+          <h3>Deep Tissue</h3>
+          <p class="small">Focused pressure to release chronic tightness, improve range of motion, and ease muscle discomfort.</p>
+        </article>
+        <article class="card">
+          <h3>Hot Stone</h3>
+          <p class="small">Warm stones help muscles relax more quickly, enhancing relief and deep relaxation.</p>
+        </article>
+        <article class="card">
+          <h3>Prenatal</h3>
+          <p class="small">Supportive positioning and gentle techniques to reduce swelling and soothe pregnancy-related tension.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section two-col">
+      <div>
+        <h2>About Joy</h2>
+        <div class="divider"></div>
+        <div class="card">
+          <p>Hi, I’m Joy. After moving from China, I built this studio around a simple idea: effective bodywork delivered with care. Sessions are tailored to you — whether you need relaxation or targeted relief.</p>
+          <ul class="benefits">
+            <li><strong>Reduce pain & tension:</strong> targeted work for neck, shoulders, and lower back.</li>
+            <li><strong>Improve circulation:</strong> promotes blood flow and faster muscle recovery.</li>
+            <li><strong>Lower stress:</strong> calms the nervous system for better sleep and mood.</li>
+            <li><strong>Increase mobility:</strong> ease stiffness and support healthy posture.</li>
+          </ul>
+          <p class="small subtle">Call for current availability and rates.</p>
+          <div class="yelp-badge small">
+            <strong>5.0 ★★★★★ on Yelp</strong>
+            <a href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth-3" target="_blank" rel="noopener">Read reviews</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>What Clients Say</h2>
+        <div class="divider"></div>
+        <div class="testi">
+          <div class="card small"><div class="star">★★★★★</div><p>“Very therapeutic massage! Strong hands… highly recommend.”</p></div>
+          <div class="card small"><div class="star">★★★★★</div><p>“Lovely, clean environment. She always knows exactly what's needed!”</p></div>
+          <div class="card small"><div class="star">★★★★★</div><p>“Stop your search and come visit Joy! Talented, kind, attentive.”</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2>Photos</h2>
+      <div class="divider"></div>
+      <div class="grid gallery">
+        <img class="card" src="https://source.unsplash.com/800x600/?massage-room" alt="Massage room" />
+        <img class="card" src="https://source.unsplash.com/800x600/?spa,relax" alt="Spa ambience" />
+        <img class="card" src="https://source.unsplash.com/800x600/?hot-stone,massage" alt="Hot stone setup" />
+      </div>
+    </section>
+
+    <section id="deals" class="section">
+      <h2>Deals & Packages</h2>
+      <div class="divider"></div>
+      <div class="packages">
+        <div class="card"><h3>Series Package</h3><p class="small">Buy 5 sessions, get 1 free.</p></div>
+        <div class="card"><h3>Prepaid Wellness Plan</h3><p class="small">Pay for 12 sessions up front and save 15% on each visit.</p></div>
+        <div class="card"><h3>Gift Cards</h3><p class="small">Available in-studio — perfect for birthdays and thank-yous.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="divider"></div>
+      <div class="card">
+        <p><strong>Phone:</strong> <a href="tel:+18177143333">(817) 714-3333</a></p>
+        <p><strong>Address:</strong> 2760 Airport Fwy, Ste 100, Fort Worth, TX 76111</p>
+        <p><strong>Hours:</strong> Mon–Sun: 9:00 AM – 8:00 PM</p>
+        <iframe class="map-embed" loading="lazy" allowfullscreen
+          src="https://www.google.com/maps?q=2760%20Airport%20Fwy%2C%20Ste%20100%2C%20Fort%20Worth%2C%20TX%2076111&output=embed">
+        </iframe>
+      </div>
+    </section>
   </div>
-</section>
-<section>
-  <h3>Extra Touches</h3>
-  <div class="about">
-    <p>When you arrive, you may notice a subtle calming scent — from the homemade massage candles I craft from natural ingredients. They set a serene mood right at the entrance and are also available for purchase in the studio.</p>
-  </div>
-</section>
-<section id="contact">
-  <h3>Contact & Booking</h3>
-  <div class="about">
-    <p><strong>Phone:</strong> (xxx) xxx-xxxx</p>
-    <p><strong>Address:</strong> [Street Address]</p>
-    <p>Email or call to book your appointment. Online booking coming soon.</p>
-  </div>
-</section>
-<footer>
-  <p>&copy; 2025 Joy Healthy Massage</p>
+</main>
+
+<div class="sticky-cta">
+  <a class="btn" href="tel:+18177143333">Call Now</a>
+  <a class="btn outline" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth-3" target="_blank" rel="noopener">Yelp Reviews</a>
+</div>
+
+<footer class="footer">
+  <div>&copy; <span id="y"></span> Joy Healthy Massage • Fort Worth, Texas</div>
+  <div><a href="#top">Back to top</a></div>
 </footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
