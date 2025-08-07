@@ -4,21 +4,22 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Joy Healthy Massage – Fort Worth</title>
-<meta name="description" content="Joy Healthy Massage in Fort Worth, TX. Full body and foot massage by a caring, experienced practitioner. Call for appointments, gift cards, and packages." />
+<meta name="description" content="Joy Healthy Massage in Fort Worth, TX. Full body and foot massage with clear benefits—reduce tension, improve circulation, and feel better. Series packages, vouchers, and corporate options available." />
 <style>
-/* —— Brand colors from the posted sign —— */
+/* —— Brand colors from the photo —— */
 :root{
   --ink:#1f1f3a;
-  --royal:#4038b8;   /* headline/prices (purple-blue) */
+  --royal:#4038b8;   /* headings & prices */
   --heart:#e5533d;   /* heart */
   --leaf:#1c9a64;    /* leaves */
-  --teal:#2db2a0;    /* dot/accent */
+  --teal:#2db2a0;    /* accent */
   --bg:#fffdf9;      /* warm paper */
   --card:#ffffff;
   --beige:#f3ede5;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
+html{scroll-behavior:smooth}                 /* smooth glide */
 body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--ink);line-height:1.6}
 a{color:inherit;text-decoration:none}
 
@@ -38,7 +39,6 @@ nav a{margin-left:16px;font-weight:700}
 .btn{display:inline-block;font-weight:800;padding:12px 18px;border-radius:10px;border:2px solid var(--royal)}
 .btn.primary{background:var(--royal);color:#fff}
 .btn.ghost{background:#fff;color:var(--royal)}
-/* subtle background */
 .hero::after{
   content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;
   background:
@@ -48,7 +48,7 @@ nav a{margin-left:16px;font-weight:700}
 
 /* Layout */
 .container{max-width:1100px;margin:0 auto;padding:26px 18px}
-.section{margin:32px 0}
+.section{margin:32px 0;scroll-margin-top:84px} /* offsets sticky header on anchor scroll */
 h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
 .divider{height:2px;background:var(--royal);opacity:.25;margin:10px 0 16px;border-radius:2px}
 .grid{display:grid;gap:16px}
@@ -58,29 +58,30 @@ h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
 ul{margin:.5rem 0 .25rem 1.1rem}
 li{margin:.25rem 0}
 
-/* Price table */
+/* Prices */
 .prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .price-card h3{margin:.25rem 0 .35rem 0;color:var(--royal)}
 .rate{display:flex;justify-content:space-between;border-bottom:1px dashed #d9d6f2;padding:6px 0;color:var(--royal);font-weight:800}
 .note{font-size:.9rem;color:#666;margin-top:8px}
 
+/* Packages */
+.packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.pkg .title{font-weight:800;color:var(--royal);margin:0 0 .35rem}
+.badge{display:inline-block;background:#fff;border:1px solid #dcd8f7;border-radius:999px;padding:6px 10px;color:var(--royal);font-weight:800}
+
 /* Footer & sticky actions */
 .footer{background:var(--beige);border-top:1px solid #e6dfd6;text-align:center;padding:22px;color:#41416a}
 .sticky{position:fixed;right:16px;bottom:16px;display:flex;gap:10px;flex-wrap:wrap;z-index:30}
 .map{border:0;width:100%;height:320px;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08)}
-.yelp{display:inline-flex;gap:8px;align-items:center;font-weight:800}
-.badge{display:inline-block;background:#fff;border:1px solid #dcd8f7;border-radius:999px;padding:6px 10px;color:var(--royal);font-weight:800}
 </style>
 </head>
 <body>
 
 <header class="header">
   <a class="brand" href="#top" aria-label="Joy Healthy Massage">
-    <!-- Recreated logo (heart + leaves, with blue outline feel via royal color text elsewhere) -->
+    <!-- Heart + leaves logo (recreated from the sign) -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" aria-hidden="true">
-      <!-- heart -->
       <path d="M48 23c8-9 22-8 27 2 5 10-2 20-15 29-4 3-8 5-12 7-4-2-8-4-12-7C23 45 16 35 21 25c5-10 19-11 27-2z" fill="var(--heart)"/>
-      <!-- leaves -->
       <path d="M30 64c6-6 14-7 18-6 4-1 12 0 18 6-7 2-13 1-18 0-5 1-11 2-18 0z" fill="var(--leaf)"/>
       <ellipse cx="48" cy="64" rx="6" ry="3.2" fill="var(--teal)" opacity=".9"/>
     </svg>
@@ -90,6 +91,7 @@ li{margin:.25rem 0}
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#prices">Prices</a>
+    <a href="#deals">Packages</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -98,12 +100,12 @@ li{margin:.25rem 0}
   <section class="hero">
     <div class="hero-inner">
       <h1>JOY • HEALTHY <span style="font-weight:300;color:#666">MASSAGE</span></h1>
-      <p>Traditional care with a personal touch. Leave looser, lighter, and more comfortable — whether you need full-body relaxation or targeted relief.</p>
+      <p>Feel better: reduce tension, improve circulation, increase mobility, and walk out lighter and more comfortable.</p>
       <div class="ctas">
         <a class="btn primary" href="tel:+18177143333">Call (817) 714-3333</a>
-        <a class="btn ghost" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth-3" target="_blank" rel="noopener">Yelp Reviews ★★★★★</a>
+        <a class="btn ghost" href="#deals">See Packages & Deals</a>
       </div>
-      <div style="margin-top:10px" class="badge">Gift cards & series packages available</div>
+      <div style="margin-top:10px" class="badge">Vouchers & series packages available</div>
     </div>
   </section>
 
@@ -114,19 +116,19 @@ li{margin:.25rem 0}
       <div class="grid services">
         <article class="card">
           <h3>Full Body Massage</h3>
-          <p class="small">A balanced session to release tension and calm the nervous system — helps circulation, eases stiffness, and supports better sleep.</p>
+          <p class="small">Balanced session that eases whole-body tension and calms the nervous system.</p>
         </article>
         <article class="card">
           <h3>Foot Massage</h3>
-          <p class="small">Focused lower-leg and foot work to reduce soreness and swelling — great for people on their feet or after long days.</p>
+          <p class="small">Focused work for feet and lower legs — great for long days on your feet.</p>
         </article>
         <article class="card">
           <h3>Deep Tissue Focus</h3>
-          <p class="small">Targeted pressure for neck, shoulders, and lower back to improve range of motion and relieve chronic tightness.</p>
+          <p class="small">Targeted pressure for neck, shoulders, or lower back to improve range of motion.</p>
         </article>
         <article class="card">
           <h3>Hot Stone Add-On</h3>
-          <p class="small">Warm stones help muscles relax faster, enhancing comfort and recovery.</p>
+          <p class="small">Warm stones help muscles relax faster and enhance relief.</p>
         </article>
       </div>
     </section>
@@ -135,14 +137,14 @@ li{margin:.25rem 0}
       <h2>About Joy</h2>
       <div class="divider"></div>
       <div class="card">
-        <p>Joy is a caring, experienced practitioner who moved from China and built a neighborhood studio loved for its honest, effective bodywork. Sessions are personalized; the goal is simple: you walk out feeling better.</p>
+        <p>Joy is an experienced practitioner who built a neighborhood studio known for effective, straightforward bodywork. Sessions are tailored so you get clear results — less tightness, better circulation, and easier movement.</p>
         <ul class="small">
           <li><strong>Reduce pain & tension</strong> in the neck, shoulders, and lower back</li>
           <li><strong>Improve circulation</strong> for quicker muscle recovery</li>
-          <li><strong>Lower stress</strong> and support deeper, more restful sleep</li>
+          <li><strong>Lower stress</strong> to support deeper, more restful sleep</li>
           <li><strong>Increase mobility</strong> and ease everyday stiffness</li>
         </ul>
-        <p class="small" style="margin-top:.4rem">Call for current availability and rates for add-ons or packages.</p>
+        <p class="small" style="margin-top:.4rem"><strong>Call to schedule now.</strong></p>
       </div>
     </section>
 
@@ -162,7 +164,34 @@ li{margin:.25rem 0}
           <div class="rate"><span>30 Minutes</span><span>$50</span></div>
         </div>
       </div>
-      <p class="note">Sales tax and gratuity not included. Gift cards and multi-session packages available.</p>
+      <p class="note">Tax and gratuity not included.</p>
+    </section>
+
+    <section id="deals" class="section">
+      <h2>Packages & Deals</h2>
+      <div class="divider"></div>
+      <div class="packages">
+        <div class="card pkg">
+          <p class="title">Series Saver</p>
+          <p class="small">Buy 5 full-body sessions, <strong>get 1 free</strong>. Use anytime.</p>
+        </div>
+        <div class="card pkg">
+          <p class="title">Monthly Reset</p>
+          <p class="small">Prepay 12 × 60-min sessions (one per month) and <strong>save 15%</strong>.</p>
+        </div>
+        <div class="card pkg">
+          <p class="title">Foot + Body Combo</p>
+          <p class="small">90-minute combo at a bundled rate. Ask for current pricing.</p>
+        </div>
+        <div class="card pkg">
+          <p class="title">Vouchers (Easy Gifts)</p>
+          <p class="small">Printable or text-message vouchers available. Purchase by phone; recipient schedules when ready.</p>
+        </div>
+        <div class="card pkg">
+          <p class="title">Corporate & Group</p>
+          <p class="small">On-site chair massage or blocks of prepaid appointments. <strong>Volume discounts</strong>. Flexible rescheduling—unused spots can be reassigned so no one loses out.</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="section">
@@ -183,7 +212,7 @@ li{margin:.25rem 0}
 <!-- sticky actions -->
 <div class="sticky">
   <a class="btn primary" href="tel:+18177143333">Call Now</a>
-  <a class="btn ghost" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth-3" target="_blank" rel="noopener">Yelp ★★★★★</a>
+  <a class="btn ghost" href="#deals">Packages</a>
 </div>
 
 <footer class="footer">
