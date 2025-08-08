@@ -6,44 +6,82 @@
 <title>Joy Healthy Massage – Fort Worth</title>
 <meta name="description" content="Joy Healthy Massage in Fort Worth, TX. Full body and foot massage with clear benefits—reduce tension, improve circulation, and feel better. Family plans, corporate packs, and gift vouchers." />
 <style>
+/* —— Brand palette —— */
 :root{
   --ink:#1f1f3a;
-  --royal:#174a8e;   /* darker blue */
-  --heart:#e24434;   /* heart red */
-  --leaf:#1aa26a;    /* leaf green */
-  --bg:#fffdf9;      /* warm background */
+  --royal:#4038b8;   /* deep blue/purple outline, headings, accents */
+  --heart:#e24434;   /* heart */
+  --leaf:#1aa26a;    /* leaves */
+  --teal:#2db2a0;    /* accent */
+  --bg:#fffdf9;      /* warm paper */
   --card:#ffffff;
   --beige:#f3ede5;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 html{scroll-behavior:smooth}
-body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--ink);line-height:1.6}
+body{
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+}
 a{color:inherit;text-decoration:none}
 
 /* Header */
-.header{background:var(--beige);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;border-bottom:1px solid #e6dfd6}
+.header{
+  background:var(--beige);
+  padding:14px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  border-bottom:1px solid #e6dfd6;
+}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800}
-.brand svg{width:54px;height:54px}
-.brand span{font-size:1.1rem}
-nav a{margin-left:16px;font-weight:700;color:var(--royal)}
+.brand svg{width:60px;height:60px}
+.brand span{
+  font-size:1.1rem;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.brand .joy{color:var(--heart)}
+.brand .dot{color:var(--leaf)}
+.brand .healthy{color:var(--heart)}
+.brand .massage{color:var(--royal)}
+nav a{margin-left:16px;font-weight:700}
 
 /* Hero */
 .hero{position:relative;overflow:hidden}
-.hero-inner{max-width:1100px;margin:0 auto;padding:44px 18px 18px;text-align:center}
-.hero h1{margin:0;font-size:clamp(28px,4vw,44px);letter-spacing:.4px}
-.hero h1 .red{color:var(--heart);font-weight:800}
-.hero h1 .green{color:var(--leaf);font-weight:800}
-.hero h1 .blue{color:var(--royal);font-weight:800}
+.hero-inner{
+  max-width:1100px;
+  margin:0 auto;
+  padding:44px 18px 18px;
+  text-align:center;
+}
+.hero h1{margin:0;font-size:clamp(28px,4vw,44px);color:var(--royal);letter-spacing:.4px}
 .hero p{max-width:760px;margin:10px auto 18px}
 .ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;font-weight:800;padding:12px 18px;border-radius:10px;border:2px solid var(--royal)}
+.btn{
+  display:inline-block;
+  font-weight:800;
+  padding:12px 18px;
+  border-radius:10px;
+  border:2px solid var(--royal);
+}
 .btn.primary{background:var(--royal);color:#fff}
 .btn.ghost{background:#fff;color:var(--royal)}
 .hero::after{
-  content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.18;
   background:
-    radial-gradient(1200px 600px at 80% -10%, var(--royal), transparent 60%),
+    radial-gradient(1200px 600px at 80% -10%, var(--teal), transparent 60%),
     radial-gradient(900px 500px at -10% 90%, var(--leaf), transparent 60%);
 }
 
@@ -54,32 +92,63 @@ h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
 .divider{height:2px;background:var(--royal);opacity:.25;margin:10px 0 16px;border-radius:2px}
 .grid{display:grid;gap:16px}
 .grid.services{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:16px}
+.card{
+  background:var(--card);
+  border-radius:14px;
+  box-shadow:0 1px 6px rgba(0,0,0,.08);
+  padding:16px;
+}
 .small{font-size:.96rem;color:#4a4a6a}
 
 /* Prices */
 .prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .price-card h3{margin:.25rem 0 .35rem 0;color:var(--royal)}
-.rate{display:flex;justify-content:space-between;border-bottom:1px dashed #d9d6f2;padding:6px 0;color:var(--royal);font-weight:800}
+.rate{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px dashed #d9d6f2;
+  padding:6px 0;
+  color:var(--royal);
+  font-weight:800;
+}
 .note{font-size:.9rem;color:#666;margin-top:8px}
 
 /* Packages */
 .packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .pkg .title{font-weight:800;color:var(--royal);margin:0 0 .35rem}
-.badge{display:inline-block;background:#fff;border:1px solid #dcd8f7;border-radius:999px;padding:6px 10px;color:var(--royal);font-weight:800}
 
 /* Footer & sticky actions */
-.footer{background:var(--beige);border-top:1px solid #e6dfd6;text-align:center;padding:22px;color:#41416a}
-.sticky{position:fixed;right:16px;bottom:16px;display:flex;gap:10px;flex-wrap:wrap;z-index:30}
-.map{border:0;width:100%;height:320px;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+.footer{
+  background:var(--beige);
+  border-top:1px solid #e6dfd6;
+  text-align:center;
+  padding:22px;
+  color:#41416a;
+}
+.sticky{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  z-index:30;
+}
+.map{
+  border:0;
+  width:100%;
+  height:320px;
+  border-radius:12px;
+  box-shadow:0 1px 6px rgba(0,0,0,.08);
+}
 </style>
 </head>
 <body>
 
 <header class="header">
   <a class="brand" href="#top" aria-label="Joy Healthy Massage">
-    <!-- Updated Logo -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120">
+    <!-- Preferred logo with deep blue outline -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
       <!-- Heart -->
       <path d="M110 22
                C124 6,152 8,162 28
@@ -88,21 +157,26 @@ h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
                c-7-4-15-7-26-14
                C60 68,48 47,58 28
                c10-20,38-22,52-6Z"
-            fill="#e24434" stroke="#174a8e" stroke-width="4"/>
-      <!-- Left leaf from bottom -->
-      <path d="M90 85
-               c-18 0-33 8-46 21
-               c20 2 38-2 56-10
-               c6-3 4-9-10-11Z"
-            fill="#1aa26a" stroke="#174a8e" stroke-width="3"/>
-      <!-- Right leaf from bottom -->
-      <path d="M130 85
-               c18 0 33 8 46 21
-               c-20 2-38-2-56-10
-               c-6-3-4-9 10-11Z"
-            fill="#1aa26a" stroke="#174a8e" stroke-width="3"/>
+            fill="#e24434" stroke="#4038b8" stroke-width="4"/>
+      <!-- Left leaf starting from base -->
+      <path d="M92 64
+               c-16 2-32 10-46 24
+               c20 4 37 0 54-10
+               c5-3 3-8-8-14Z"
+            fill="#1aa26a" stroke="#4038b8" stroke-width="3"/>
+      <!-- Right leaf starting from base -->
+      <path d="M128 64
+               c16 2 32 10 46 24
+               c-20 4-37 0-54-10
+               c-5-3-3-8 8-14Z"
+            fill="#1aa26a" stroke="#4038b8" stroke-width="3"/>
     </svg>
-    <span><span class="red">Joy Healthy</span><span class="green"> • </span><span class="blue">Massage</span></span>
+    <span>
+      <span class="joy">Joy</span>
+      <span class="dot">•</span>
+      <span class="healthy">Healthy</span>
+      <span class="massage">Massage</span>
+    </span>
   </a>
   <nav>
     <a href="#services">Services</a>
@@ -116,7 +190,6 @@ h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
 <main id="top">
   <section class="hero">
     <div class="hero-inner">
-      <h1><span class="red">JOY HEALTHY</span><span class="green"> • </span><span class="blue">MASSAGE</span></h1>
       <p>Feel better: reduce tension, improve circulation, increase mobility, and walk out more comfortable.</p>
       <div class="ctas">
         <a class="btn primary" href="tel:+18177143333">Call (817) 714-3333</a>
@@ -131,10 +204,10 @@ h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
       <h2>Services</h2>
       <div class="divider"></div>
       <div class="grid services">
-        <article class="card"><h3>Full Body Massage</h3><p class="small">Balanced session that eases whole-body tension and calms the nervous system.</p></article>
-        <article class="card"><h3>Foot Massage</h3><p class="small">Focused work for feet and lower legs — great after long days on your feet.</p></article>
-        <article class="card"><h3>Deep Tissue Focus</h3><p class="small">Targeted pressure for neck, shoulders, or lower back to improve range of motion.</p></article>
-        <article class="card"><h3>Hot Stone Add-On</h3><p class="small">Warm stones help muscles relax faster and enhance relief.</p></article>
+        <article class="card"><h3>Full Body Massage</h3><p class="small">Balanced session easing whole-body tension.</p></article>
+        <article class="card"><h3>Foot Massage</h3><p class="small">Focused work for feet and lower legs.</p></article>
+        <article class="card"><h3>Deep Tissue Focus</h3><p class="small">Targeted pressure for neck, shoulders, or lower back.</p></article>
+        <article class="card"><h3>Hot Stone Add-On</h3><p class="small">Warm stones help muscles relax faster.</p></article>
       </div>
     </section>
 
@@ -142,14 +215,7 @@ h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
       <h2>About Joy</h2>
       <div class="divider"></div>
       <div class="card">
-        <p>Joy is an experienced practitioner with a neighborhood studio known for effective, straightforward bodywork. Sessions are tailored so you get clear results — less tightness, better circulation, and easier movement.</p>
-        <ul class="small">
-          <li><strong>Reduce pain & tension</strong> in the neck, shoulders, and lower back</li>
-          <li><strong>Improve circulation</strong> for faster muscle recovery</li>
-          <li><strong>Lower stress</strong> to support deeper, more restful sleep</li>
-          <li><strong>Increase mobility</strong> and ease everyday stiffness</li>
-        </ul>
-        <p class="small"><strong>Call to schedule now.</strong></p>
+        <p>Joy is an experienced practitioner with a neighborhood studio known for effective bodywork. Sessions are tailored so you get clear results — less tightness, better circulation, and easier movement.</p>
       </div>
     </section>
 
@@ -169,16 +235,24 @@ h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
           <div class="rate"><span>30 Minutes</span><span>$50</span></div>
         </div>
       </div>
-      <p class="note">Tax and gratuity not included.</p>
     </section>
 
     <section id="deals" class="section">
       <h2>Packages & Deals</h2>
       <div class="divider"></div>
       <div class="packages">
-        <div class="card pkg"><p class="title">Year of Wellness – Family Plan</p><p class="small"><strong>Buy 12 massages to use over 12 months. Save 15%.</strong> Perfect for recurring relaxation, pain relief, or stress management. Can be shared by family members.</p></div>
-        <div class="card pkg"><p class="title">Corporate & Group Pack</p><p class="small"><strong>Buy 10+ massages and save 10%.</strong> Fully transferable — give to any number of recipients. Ideal for employee perks, client gifts, or group events. Must be used within 18 months.</p></div>
-        <div class="card pkg"><p class="title">Gift Vouchers</p><p class="small">Buy any service as a digital or printed voucher. Perfect for birthdays, holidays, and thank-yous.</p></div>
+        <div class="card pkg">
+          <p class="title">Year of Wellness – Family Plan</p>
+          <p class="small"><strong>Buy 12 massages to use over 12 months. Save 15%.</strong> Perfect for recurring relaxation, pain relief, or stress management. Can be shared by family members.</p>
+        </div>
+        <div class="card pkg">
+          <p class="title">Corporate & Group Pack</p>
+          <p class="small"><strong>Buy 10+ massages and save 10%.</strong> Fully transferable — give to any number of recipients. Ideal for employee perks, client gifts, or group events. Must be used within 18 months.</p>
+        </div>
+        <div class="card pkg">
+          <p class="title">Gift Vouchers</p>
+          <p class="small">Buy any service as a digital or printed voucher. Perfect for birthdays, holidays, and thank-yous.</p>
+        </div>
       </div>
     </section>
 
