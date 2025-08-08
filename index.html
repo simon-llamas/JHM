@@ -6,18 +6,16 @@
 <title>Joy Healthy Massage – Fort Worth</title>
 <meta name="description" content="Joy Healthy Massage in Fort Worth, TX. Full body and foot massage with clear benefits—reduce tension, improve circulation, and feel better. Family plans, corporate packs, and gift vouchers." />
 <style>
-/* —— Brand palette —— */
 :root{
   --ink:#1f1f3a;
-  --royal:#4038b8;   /* deep blue/purple for text, accents, outlines */
-  --heart:#d54335;   /* red for logo + title words */
-  --leaf:#17885a;    /* green for logo + dot */
-  --bg:#fffdf9;      /* warm paper */
+  --royal:#4038b8;
+  --heart:#d54335;
+  --leaf:#17885a;
+  --bg:#fffdf9;
   --card:#ffffff;
-  --beige:#f6f1e8;   /* warm neutral */
+  --beige:#f8ecea; /* pinkish beige */
 }
 
-/* Base */
 *{box-sizing:border-box}
 html,body{margin:0}
 html{scroll-behavior:smooth}
@@ -28,21 +26,24 @@ body{
   line-height:1.6;
   position:relative;
 }
-/* Light GREEN side halos + gentle vertical wash; center stays lighter */
 body::before{
   content:"";
   position:fixed; inset:0; z-index:0; pointer-events:none;
   background:
-    radial-gradient(44% 100% at -12% 50%, rgba(23,136,90,.10), transparent 62%),
-    radial-gradient(44% 100% at 112% 50%, rgba(23,136,90,.10), transparent 62%),
-    linear-gradient(to bottom, rgba(23,136,90,.04) 0%, rgba(23,136,90,0) 55%);
+    radial-gradient(44% 100% at -12% 50%, rgba(23,136,90,.18), transparent 62%),
+    radial-gradient(44% 100% at 112% 50%, rgba(23,136,90,.18), transparent 62%),
+    linear-gradient(90deg,
+      rgba(23,136,90,.12) 0%,
+      rgba(23,136,90,0) 32%,
+      rgba(23,136,90,0) 68%,
+      rgba(23,136,90,.12) 100%
+    ),
+    linear-gradient(to bottom, rgba(23,136,90,.06) 0%, rgba(23,136,90,0) 55%);
 }
 
-/* Links: keep brand colors, no default blue underline */
 a{color:inherit;text-decoration:none}
 .brand, .brand *, nav a, .reviews a { text-decoration:none; color:inherit }
 
-/* Header */
 .header{
   background:var(--beige);
   padding:14px 18px;
@@ -53,26 +54,25 @@ a{color:inherit;text-decoration:none}
 .brand{
   display:flex; align-items:center; gap:8px; font-weight:800;
 }
-.brand svg{width:50px; height:50px}
+.brand svg{width:44px; height:44px}
 .brand span{
-  font-size:1.08rem; display:flex; align-items:center;
-  gap:0; letter-spacing:-0.45px; /* tighter Joy • Healthy */
+  font-size:1.05rem; display:flex; align-items:center;
+  gap:2px; letter-spacing:-0.3px;
 }
 .brand .joy, .brand .healthy{color:var(--heart)}
-.brand .dot{color:var(--leaf); transform:scale(.72); opacity:.9; margin:0 .5px}
+.brand .dot{color:var(--leaf)}
 .brand .massage{color:var(--royal)}
 nav a{margin-left:16px; font-weight:700}
 
-/* Hero */
 .hero{position:relative}
 .hero-inner{
   max-width:1100px; margin:0 auto; padding:44px 18px 18px; text-align:center; position:relative; z-index:1;
 }
 .hero h1{
-  margin:0; font-size:clamp(28px,4vw,44px); letter-spacing:-.48px;
+  margin:0; font-size:clamp(28px,4vw,44px); letter-spacing:-.4px;
 }
 .hero .joy, .hero .healthy{color:var(--heart); font-weight:800}
-.hero .dot{color:var(--leaf); transform:scale(.72); opacity:.9; margin:0 .5px}
+.hero .dot{color:var(--leaf); margin:0 2px}
 .hero .massage{color:var(--royal); font-weight:800}
 .hero p{max-width:760px; margin:10px auto 18px}
 .ctas{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
@@ -80,14 +80,6 @@ nav a{margin-left:16px; font-weight:700}
 .btn.primary{background:var(--royal); color:#fff}
 .btn.ghost{background:#fff; color:var(--royal)}
 
-/* Yelp badge bubble */
-.badge{
-  display:inline-block; background:#fff; border:1px solid #dcd8f7;
-  border-radius:999px; padding:8px 12px; color:var(--royal);
-  font-weight:800; box-shadow:0 1px 4px rgba(0,0,0,.06)
-}
-
-/* Layout */
 .container{max-width:1100px; margin:0 auto; padding:26px 18px}
 .section{margin:32px 0; scroll-margin-top:84px}
 h2{margin:0 0 8px; font-size:clamp(22px,3vw,32px); color:var(--royal)}
@@ -99,25 +91,19 @@ h2{margin:0 0 8px; font-size:clamp(22px,3vw,32px); color:var(--royal)}
 ul{margin:.5rem 0 .25rem 1.1rem}
 li{margin:.25rem 0}
 
-/* Light section backgrounds to ground content */
 .section-bg{background:var(--beige); padding:26px 18px; border-radius:12px}
 
-/* Prices */
 .prices{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
 .price-card h3{margin:.25rem 0 .35rem 0; color:var(--royal)}
 .rate{display:flex; justify-content:space-between; border-bottom:1px dashed #d9d6f2; padding:6px 0; color:var(--royal); font-weight:800}
 .note{font-size:.9rem; color:#666; margin-top:8px}
 
-/* Packages */
 .packages{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
 .pkg .title{font-weight:800; color:var(--royal); margin:0 0 .35rem}
 
-/* Reviews */
-.reviews{max-width:900px;margin:24px auto;padding:0 18px}
-.review{background:var(--card);border:1px solid #eee;border-radius:12px;padding:12px 14px;margin:10px 0;box-shadow:0 1px 4px rgba(0,0,0,.05)}
-.review cite{display:block;color:#666;margin-top:6px;font-style:normal}
+.reviews .review{margin-bottom:14px; font-style:italic}
+.reviews cite{display:block;color:#666;margin-top:6px;font-style:normal}
 
-/* Footer & sticky actions */
 .footer{background:var(--beige); border-top:1px solid #e6dfd6; text-align:center; padding:22px; color:#41416a}
 .sticky{position:fixed; right:16px; bottom:16px; display:flex; gap:10px; flex-wrap:wrap; z-index:30}
 .map{border:0; width:100%; height:320px; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,.08)}
@@ -127,7 +113,6 @@ li{margin:.25rem 0}
 
 <header class="header">
   <a class="brand" href="#top" aria-label="Joy Healthy Massage">
-    <!-- Your chosen SVG logo (unchanged) -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
       <!-- Heart -->
       <path d="M110 22
@@ -138,15 +123,17 @@ li{margin:.25rem 0}
                C60 68,48 47,58 28
                c10-20,38-22,52-6Z"
             fill="#d54335" stroke="#4038b8" stroke-width="4"/>
-      <!-- Left leaf -->
-      <path d="M110 96
-               C 80 96, 48 99, 28 106
-               C 68 118, 102 118, 110 96 Z"
+
+      <!-- Left leaf: mid-bulge but narrower -->
+      <path d="M110 98
+               C 82 76, 44 78, 20 98
+               C 44 118, 82 120, 110 98 Z"
             fill="#17885a" stroke="#4038b8" stroke-width="3"/>
-      <!-- Right leaf -->
-      <path d="M110 96
-               C 140 96, 172 99, 192 106
-               C 152 118, 118 118, 110 96 Z"
+
+      <!-- Right leaf: mid-bulge but narrower -->
+      <path d="M110 98
+               C 138 76, 176 78, 200 98
+               C 176 118, 138 120, 110 98 Z"
             fill="#17885a" stroke="#4038b8" stroke-width="3"/>
     </svg>
     <span>
@@ -180,11 +167,9 @@ li{margin:.25rem 0}
         <a class="btn primary" href="tel:+18177143333">Call (817) 714-3333</a>
         <a class="btn ghost" href="#deals">See Packages & Deals</a>
       </div>
-      <div style="margin-top:12px">
-        <a class="badge" target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth" aria-label="Read Yelp reviews">
-          <span aria-hidden="true">★★★★★</span> 5-Star on Yelp — Local favorite
-        </a>
-      </div>
+      <a class="badge" target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth">
+        <span aria-hidden="true">★★★★★</span> 5-Star on Yelp — Local favorite
+      </a>
     </div>
   </section>
 
@@ -265,12 +250,15 @@ li{margin:.25rem 0}
       </div>
     </section>
 
-    <section id="reviews" class="reviews">
+    <section id="reviews" class="section">
       <h2>What clients say</h2>
-      <div class="review">“Fantastic service and a lovely, clean environment.”<cite>— Yelp</cite></div>
-      <div class="review">“The best massage place in Fort Worth — extremely relaxing and clean.”<cite>— Yelp</cite></div>
-      <div class="review">“One of the best massages of my life. Neck and back pain gone.”<cite>— Yelp</cite></div>
-      <p class="small" style="margin-top:8px">See more on <a target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth" style="font-weight:700">Yelp</a>.</p>
+      <div class="divider"></div>
+      <div class="reviews">
+        <div class="review">“Fantastic service and a lovely, clean environment.”<cite>— Yelp</cite></div>
+        <div class="review">“The best massage place in Fort Worth — extremely relaxing and clean.”<cite>— Yelp</cite></div>
+        <div class="review">“One of the best massages of my life. Neck and back pain gone.”<cite>— Yelp</cite></div>
+        <p class="small" style="margin-top:8px">See more on <a style="color:var(--royal);text-decoration:none;font-weight:700" target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth">Yelp</a>.</p>
+      </div>
     </section>
 
     <section id="contact" class="section">
@@ -288,7 +276,6 @@ li{margin:.25rem 0}
   </div>
 </main>
 
-<!-- sticky actions -->
 <div class="sticky">
   <a class="btn primary" href="tel:+18177143333">Call Now</a>
   <a class="btn ghost" href="#deals">Packages</a>
