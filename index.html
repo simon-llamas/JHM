@@ -56,10 +56,10 @@ a{color:inherit;text-decoration:none}
   pointer-events: none;
 }
 .bamboo-left {
-  left: -80px; /* positioned outside main content area */
+  left: 20px; /* visible inside the main area */
 }
 .bamboo-right {
-  right: -80px; /* positioned outside main content area */
+  right: 20px; /* visible inside the main area */
 }
 /* Hide bamboo on mobile and tablets */
 @media (max-width: 1200px) {
@@ -99,6 +99,9 @@ nav a{margin-left:16px; font-weight:700}
 
 /* Hero */
 .hero{position:relative}
+
+/* Main content wrapper for bamboo positioning */
+main{position:relative; overflow:hidden}
 .hero-inner{
   max-width:1100px; margin:0 auto; padding:44px 18px 18px; text-align:center; position:relative; z-index:1;
 }
