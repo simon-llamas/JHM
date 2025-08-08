@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -21,25 +22,25 @@
 html,body{margin:0}
 html{scroll-behavior:smooth}
 /* Import elegant serif font for titles */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url(‘https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap’);
+@import url(‘https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap’);
 
 body{
-  font-family:'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.6;
-  position:relative;
+font-family:‘Inter’, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+background:var(–bg);
+color:var(–ink);
+line-height:1.6;
+position:relative;
 }
 /* Green side fade + soft blush center glow + light vertical wash */
 body::before{
-  content:"";
-  position:fixed; inset:0; z-index:0; pointer-events:none;
-  background:
-    radial-gradient(42% 100% at -12% 50%, rgba(23,136,90,0.10), transparent 60%),
-    radial-gradient(42% 100% at 112% 50%, rgba(23,136,90,0.10), transparent 60%),
-    radial-gradient(circle at center, rgba(213,67,53,0.06), transparent 60%),
-    linear-gradient(to bottom, rgba(64,56,184,.04) 0%, rgba(64,56,184,0) 55%);
+content:””;
+position:fixed; inset:0; z-index:0; pointer-events:none;
+background:
+radial-gradient(42% 100% at -12% 50%, rgba(23,136,90,0.10), transparent 60%),
+radial-gradient(42% 100% at 112% 50%, rgba(23,136,90,0.10), transparent 60%),
+radial-gradient(circle at center, rgba(213,67,53,0.06), transparent 60%),
+linear-gradient(to bottom, rgba(64,56,184,.04) 0%, rgba(64,56,184,0) 55%);
 }
 
 a{color:inherit;text-decoration:none}
@@ -47,64 +48,64 @@ a{color:inherit;text-decoration:none}
 
 /* Bamboo side panels */
 .bamboo-panel {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 60px; /* panel width */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="400" viewBox="0 0 60 400"><rect width="4" height="400" x="28" y="0" fill="%2317885a"/><rect width="4" height="400" x="12" y="0" fill="%2317885a"/><rect width="4" height="400" x="44" y="0" fill="%2317885a"/><path d="M10 40 l6 -4 M26 35 l8 -6 M42 45 l5 -3" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 90 l8 -6 M26 85 l5 -4 M42 95 l7 -5" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 140 l5 -3 M26 135 l7 -5 M42 145 l6 -4" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 190 l7 -5 M26 185 l6 -4 M42 195 l8 -6" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 240 l6 -4 M26 235 l8 -6 M42 245 l5 -3" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 290 l8 -6 M26 285 l5 -3 M42 295 l7 -5" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 340 l5 -4 M26 335 l7 -5 M42 345 l6 -4" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/></svg>');
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: contain;
-  opacity: 0.15; /* subtle */
-  z-index: 0; /* behind content */
-  pointer-events: none;
+position: absolute;
+top: 0;
+bottom: 0;
+width: 60px; /* panel width */
+background-image: url(‘data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="400" viewBox="0 0 60 400"><rect width="4" height="400" x="28" y="0" fill="%2317885a"/><rect width="4" height="400" x="12" y="0" fill="%2317885a"/><rect width="4" height="400" x="44" y="0" fill="%2317885a"/><path d="M10 40 l6 -4 M26 35 l8 -6 M42 45 l5 -3" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 90 l8 -6 M26 85 l5 -4 M42 95 l7 -5" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 140 l5 -3 M26 135 l7 -5 M42 145 l6 -4" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 190 l7 -5 M26 185 l6 -4 M42 195 l8 -6" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 240 l6 -4 M26 235 l8 -6 M42 245 l5 -3" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 290 l8 -6 M26 285 l5 -3 M42 295 l7 -5" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/><path d="M10 340 l5 -4 M26 335 l7 -5 M42 345 l6 -4" stroke="%2317885a" stroke-width="1.5" fill="none" opacity="0.7"/></svg>’);
+background-repeat: repeat-y;
+background-position: center;
+background-size: contain;
+opacity: 0.15; /* subtle */
+z-index: 0; /* behind content */
+pointer-events: none;
 }
 .bamboo-left {
-  left: 20px; /* visible inside the main area */
+left: 20px; /* visible inside the main area */
 }
 .bamboo-right {
-  right: 20px; /* visible inside the main area */
+right: 20px; /* visible inside the main area */
 }
 /* Hide bamboo on mobile and tablets */
 @media (max-width: 1200px) {
-  .bamboo-panel {
-    display: none;
-  }
+.bamboo-panel {
+display: none;
+}
 }
 
 /* Header with pink background, subtle top border and shadow */
 .header{
-  background: var(--beige);
-  padding: 14px 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+background: var(–beige);
+padding: 14px 18px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 10;
 
-  border-top: 1.5px solid rgba(209, 156, 153, 0.6); /* subtle pink top line */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);       /* soft shadow below */
-  border-radius: 0 0 8px 8px;                      /* gentle rounding bottom corners */
-  box-sizing: border-box;
+border-top: 1.5px solid rgba(209, 156, 153, 0.6); /* subtle pink top line */
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);       /* soft shadow below */
+border-radius: 0 0 8px 8px;                      /* gentle rounding bottom corners */
+box-sizing: border-box;
 }
 .brand{
-  display:flex; align-items:center; gap:8px; font-weight:800;
+display:flex; align-items:center; gap:8px; font-weight:800;
 }
 .brand svg{width:44px; height:44px}
 .brand span{
-  font-size:1.05rem; 
-  display:flex; 
-  align-items:center; 
-  gap:2px; 
-  letter-spacing:-0.3px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
+font-size:1.05rem;
+display:flex;
+align-items:center;
+gap:2px;
+letter-spacing:-0.3px;
+font-family: ‘Playfair Display’, serif;
+font-weight: 600;
 }
-.brand .joy, .brand .healthy{color:var(--heart)}
-.brand .dot{color:var(--leaf)}
-.brand .massage{color:var(--royal)}
-nav a{margin-left:16px; font-weight:600; font-family: 'Inter', sans-serif}
+.brand .joy, .brand .healthy{color:var(–heart)}
+.brand .dot{color:var(–leaf)}
+.brand .massage{color:var(–royal)}
+nav a{margin-left:16px; font-weight:600; font-family: ‘Inter’, sans-serif}
 
 /* Hero */
 .hero{position:relative}
@@ -112,77 +113,75 @@ nav a{margin-left:16px; font-weight:600; font-family: 'Inter', sans-serif}
 /* Main content wrapper for bamboo positioning */
 main{position:relative; overflow:hidden}
 .hero-inner{
-  max-width:1100px; margin:0 auto; padding:44px 18px 18px; text-align:center; position:relative; z-index:1;
+max-width:1100px; margin:0 auto; padding:44px 18px 18px; text-align:center; position:relative; z-index:1;
 }
 .hero h1{
-  margin:0; 
-  font-size:clamp(28px,4vw,44px); 
-  letter-spacing:-.4px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
+margin:0;
+font-size:clamp(28px,4vw,44px);
+letter-spacing:-.4px;
+font-family: ‘Playfair Display’, serif;
+font-weight: 600;
 }
-.hero .joy, .hero .healthy{color:var(--heart); font-weight:800}
-.hero .dot{color:var(--leaf); margin:0 1.5px;}
-.hero .massage{color:var(--royal); font-weight:800}
+.hero .joy, .hero .healthy{color:var(–heart); font-weight:800}
+.hero .dot{color:var(–leaf); margin:0 1.5px;}
+.hero .massage{color:var(–royal); font-weight:800}
 .hero p{max-width:760px; margin:10px auto 18px}
 .ctas{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
-.btn{display:inline-block; font-weight:700; padding:12px 18px; border-radius:10px; border:2px solid var(--royal); font-family: 'Inter', sans-serif}
-.btn.primary{background:var(--royal); color:#fff}
-.btn.ghost{background:#fff; color:var(--royal)}
+.btn{display:inline-block; font-weight:700; padding:12px 18px; border-radius:10px; border:2px solid var(–royal); font-family: ‘Inter’, sans-serif}
+.btn.primary{background:var(–royal); color:#fff}
+.btn.ghost{background:#fff; color:var(–royal)}
 
 /* Yelp 5-star bubble in royal blue */
 .badge {
-  display: inline-block;
-  background: var(--royal);
-  color: white;
-  font-weight: 800;
-  padding: 8px 18px;
-  border-radius: 999px;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.3s ease;
-  font-size: 1rem;
-  margin-top: 10px;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
+display: inline-block;
+background: var(–royal);
+color: white;
+font-weight: 800;
+padding: 8px 18px;
+border-radius: 999px;
+cursor: pointer;
+user-select: none;
+transition: background-color 0.3s ease;
+font-size: 1rem;
+margin-top: 10px;
+text-align: center;
+text-decoration: none;
+white-space: nowrap;
 }
 .badge:hover,
 .badge:focus {
-  background-color: #2e2a85;
-  outline: none;
-  text-decoration: none;
+background-color: #2e2a85;
+outline: none;
+text-decoration: none;
 }
 
 /* Layout */
 .container{max-width:1100px; margin:0 auto; padding:26px 18px; position:relative; z-index:2}
 .section{margin:32px 0; scroll-margin-top:84px}
-h2{margin:0 0 8px; font-size:clamp(22px,3vw,32px); color:var(--royal); font-family: 'Inter', sans-serif; font-weight: 600}
-.divider{height:2px; background:var(--royal); opacity:.25; margin:10px 0 16px; border-radius:2px}
+h2{margin:0 0 8px; font-size:clamp(22px,3vw,32px); color:var(–royal); font-family: ‘Inter’, sans-serif; font-weight: 600}
+.divider{height:2px; background:var(–royal); opacity:.25; margin:10px 0 16px; border-radius:2px}
 .grid{display:grid; gap:16px}
 .grid.services{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card); border-radius:14px; box-shadow:0 1px 6px rgba(0,0,0,.08); padding:16px; font-family: 'Inter', sans-serif}
+.card{background:var(–card); border-radius:14px; box-shadow:0 1px 6px rgba(0,0,0,.08); padding:16px; font-family: ‘Inter’, sans-serif}
 .small{font-size:.96rem; color:#4a4a6a}
 ul{margin:.5rem 0 .25rem 1.1rem}
 li{margin:.25rem 0}
 
-.section-bg{background:var(--beige); padding:26px 18px; border-radius:12px}
+.section-bg{background:var(–beige); padding:26px 18px; border-radius:12px}
 
 .prices{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
-.price-card h3{margin:.25rem 0 .35rem 0; color:var(--royal)}
-.rate{display:flex; justify-content:space-between; border-bottom:1px dashed #d9d6f2; padding:6px 0; color:var(--royal); font-weight:800}
+.price-card h3{margin:.25rem 0 .35rem 0; color:var(–royal)}
+.rate{display:flex; justify-content:space-between; border-bottom:1px dashed #d9d6f2; padding:6px 0; color:var(–royal); font-weight:800}
 .note{font-size:.9rem; color:#666; margin-top:8px}
-
-.packages{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
-.pkg .title{font-weight:800; color:var(--royal); margin:0 0 .35rem}
 
 .reviews .review{margin-bottom:14px; font-style:italic}
 .reviews cite{display:block;color:#666;margin-top:6px;font-style:normal}
 
-.footer{background:var(--beige); border-top:1px solid #e6dfd6; text-align:center; padding:22px; color:#41416a}
+.footer{background:var(–beige); border-top:1px solid #e6dfd6; text-align:center; padding:22px; color:#41416a}
 .sticky{position:fixed; right:16px; bottom:16px; display:flex; gap:10px; flex-wrap:wrap; z-index:30}
 .map{border:0; width:100%; height:320px; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,.08)}
 </style>
+
 </head>
 <body>
 
@@ -199,30 +198,32 @@ li{margin:.25rem 0}
                c10-20,38-22,52-6Z"
             fill="#d54335" stroke="#4038b8" stroke-width="4"/>
 
-      <!-- Left leaf: mid-bulge but narrower -->
-      <path d="M110 98
-               C 82 76, 44 78, 20 98
-               C 44 118, 82 120, 110 98 Z"
-            fill="#17885a" stroke="#4038b8" stroke-width="3"/>
+```
+  <!-- Left leaf: mid-bulge but narrower -->
+  <path d="M110 98
+           C 82 76, 44 78, 20 98
+           C 44 118, 82 120, 110 98 Z"
+        fill="#17885a" stroke="#4038b8" stroke-width="3"/>
 
-      <!-- Right leaf: mid-bulge but narrower -->
-      <path d="M110 98
-               C 138 76, 176 78, 200 98
-               C 176 118, 138 120, 110 98 Z"
-            fill="#17885a" stroke="#4038b8" stroke-width="3"/>
-    </svg>
-    <span>
-      <span class="joy">Joy</span>
-      <span class="dot">•</span>
-      <span class="healthy">Healthy</span>
-      <span class="massage">Massage</span>
-    </span>
+  <!-- Right leaf: mid-bulge but narrower -->
+  <path d="M110 98
+           C 138 76, 176 78, 200 98
+           C 176 118, 138 120, 110 98 Z"
+        fill="#17885a" stroke="#4038b8" stroke-width="3"/>
+</svg>
+<span>
+  <span class="joy">Joy</span>
+  <span class="dot">•</span>
+  <span class="healthy">Healthy</span>
+  <span class="massage">Massage</span>
+</span>
+```
+
   </a>
   <nav>
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#prices">Prices</a>
-    <a href="#deals">Packages</a>
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -242,7 +243,7 @@ li{margin:.25rem 0}
       <p>Feel better: reduce tension, improve circulation, increase mobility, and walk out more comfortable.</p>
       <div class="ctas">
         <a class="btn primary" href="tel:+18177143333">Call (817) 714-3333</a>
-        <a class="btn ghost" href="#deals">See Packages & Deals</a>
+        <a class="btn ghost" href="#prices">See Prices</a>
       </div>
       <a class="badge" target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth" aria-label="Visit Yelp page for Joy Healthy Massage">
         <span aria-hidden="true">★★★★★</span> 5-Star on Yelp — Local favorite
@@ -274,88 +275,71 @@ li{margin:.25rem 0}
       </div>
     </section>
 
-    <section id="about" class="section">
-      <h2>About Joy</h2>
-      <div class="divider"></div>
-      <div class="card">
-        <p>Joy is an experienced practitioner with a neighborhood studio known for effective, straightforward bodywork. Sessions are tailored so you get clear results — less tightness, better circulation, and easier movement.</p>
-        <ul class="small">
-          <li><strong>Reduce pain & tension</strong> in the neck, shoulders, and lower back</li>
-          <li><strong>Improve circulation</strong> for faster muscle recovery</li>
-          <li><strong>Lower stress</strong> to support deeper, more restful sleep</li>
-          <li><strong>Increase mobility</strong> and ease everyday stiffness</li>
-        </ul>
-        <p class="small" style="margin-top:.4rem"><strong>Call to schedule now.</strong></p>
-      </div>
-    </section>
+```
+<section id="about" class="section">
+  <h2>About Joy</h2>
+  <div class="divider"></div>
+  <div class="card">
+    <p>Joy is an experienced practitioner with a neighborhood studio known for effective, straightforward bodywork. Sessions are tailored so you get clear results — less tightness, better circulation, and easier movement.</p>
+    <ul class="small">
+      <li><strong>Reduce pain & tension</strong> in the neck, shoulders, and lower back</li>
+      <li><strong>Improve circulation</strong> for faster muscle recovery</li>
+      <li><strong>Lower stress</strong> to support deeper, more restful sleep</li>
+      <li><strong>Increase mobility</strong> and ease everyday stiffness</li>
+    </ul>
+    <p class="small" style="margin-top:.4rem"><strong>Call to schedule now.</strong></p>
+  </div>
+</section>
 
-    <section id="prices" class="section section-bg">
-      <h2>Prices</h2>
-      <div class="divider"></div>
-      <div class="prices">
-        <div class="card price-card">
-          <h3>Full Body Massage</h3>
-          <div class="rate"><span>An Hour and a Half (80 Minutes)</span><span>$110</span></div>
-          <div class="rate"><span>An Hour (50 Minutes)</span><span>$75</span></div>
-          <div class="rate"><span>Half an Hour (25 Minutes)</span><span>$55</span></div>
-        </div>
-        <div class="card price-card">
-          <h3>Foot Massage</h3>
-          <div class="rate"><span>60 Minutes</span><span>$65</span></div>
-          <div class="rate"><span>30 Minutes</span><span>$50</span></div>
-        </div>
-      </div>
-      <p class="note">Tax and gratuity not included.</p>
-    </section>
-<!--
-    <section id="deals" class="section section-bg">
-      <h2>Packages & Deals</h2>
-      <div class="divider"></div>
-      <div class="packages">
-        <div class="card pkg">
-          <p class="title">Year of Wellness – Family Plan</p>
-          <p class="small"><strong>Buy 12 massages to use over 12 months. Save 15%.</strong> Perfect for recurring relaxation, pain relief, or stress management. Can be shared by family members.</p>
-        </div>
-        <div class="card pkg">
-          <p class="title">Corporate & Group Pack</p>
-          <p class="small"><strong>Buy 10+ massages and save 10%.</strong> Fully transferable — give to any number of recipients. Ideal for employee perks, client gifts, or group events. Must be used within 18 months.</p>
-        </div>
-        <div class="card pkg">
-          <p class="title">Gift Vouchers</p>
-          <p class="small">Buy any service as a digital or printed voucher. Perfect for birthdays, holidays, and thank-yous.</p>
-        </div>
-      </div>
-    </section>
--->
-    <section id="reviews" class="section">
-      <h2>What clients say</h2>
-      <div class="divider"></div>
-      <div class="reviews">
-        <div class="review">"Fantastic service and a lovely, clean environment."<cite>— Yelp</cite></div>
-        <div class="review">"The best massage place in Fort Worth — extremely relaxing and clean."<cite>— Yelp</cite></div>
-        <div class="review">"One of the best massages of my life. Neck and back pain gone."<cite>— Yelp</cite></div>
-        <p class="small" style="margin-top:8px">See more on <a style="color:var(--royal);text-decoration:none;font-weight:700" target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth">Yelp</a>.</p>
-      </div>
-    </section>
+<section id="prices" class="section section-bg">
+  <h2>Prices</h2>
+  <div class="divider"></div>
+  <div class="prices">
+    <div class="card price-card">
+      <h3>Full Body Massage</h3>
+      <div class="rate"><span>An Hour and a Half (80 Minutes)</span><span>$110</span></div>
+      <div class="rate"><span>An Hour (50 Minutes)</span><span>$75</span></div>
+      <div class="rate"><span>Half an Hour (25 Minutes)</span><span>$55</span></div>
+    </div>
+    <div class="card price-card">
+      <h3>Foot Massage</h3>
+      <div class="rate"><span>An Hour (50 Minutes)</span><span>$65</span></div>
+      <div class="rate"><span>Half an Hour (25 Minutes)</span><span>$50</span></div>
+    </div>
+  </div>
+  <p class="note">Tax and gratuity not included.</p>
+</section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <div class="divider"></div>
-      <div class="card">
-        <p><strong>Phone:</strong> <a href="tel:+18177143333">(817) 714-3333</a></p>
-        <p><strong>Address:</strong> 2760 Airport Fwy, Fort Worth, TX 76111</p>
-        <p><strong>Hours:</strong> Mon–Sun: 9:00 AM – 8:00 PM</p>
-        <iframe class="map" loading="lazy" allowfullscreen
-          src="https://www.google.com/maps?q=2760%20Airport%20Fwy%2C%20Fort%20Worth%2C%20TX%2076111&output=embed">
-        </iframe>
-      </div>
-    </section>
+<section id="reviews" class="section">
+  <h2>What clients say</h2>
+  <div class="divider"></div>
+  <div class="reviews">
+    <div class="review">"Fantastic service and a lovely, clean environment."<cite>— Yelp</cite></div>
+    <div class="review">"The best massage place in Fort Worth — extremely relaxing and clean."<cite>— Yelp</cite></div>
+    <div class="review">"One of the best massages of my life. Neck and back pain gone."<cite>— Yelp</cite></div>
+    <p class="small" style="margin-top:8px">See more on <a style="color:var(--royal);text-decoration:none;font-weight:700" target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth">Yelp</a>.</p>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="divider"></div>
+  <div class="card">
+    <p><strong>Phone:</strong> <a href="tel:+18177143333">(817) 714-3333</a></p>
+    <p><strong>Address:</strong> 2760 Airport Fwy, Fort Worth, TX 76111</p>
+    <p><strong>Hours:</strong> Mon–Sun: 9:00 AM – 8:00 PM</p>
+    <iframe class="map" loading="lazy" allowfullscreen
+      src="https://www.google.com/maps?q=2760%20Airport%20Fwy%2C%20Fort%20Worth%2C%20TX%2076111&output=embed">
+    </iframe>
+  </div>
+</section>
+```
+
   </div>
 </main>
 
 <div class="sticky">
   <a class="btn primary" href="tel:+18177143333">Call Now</a>
-  <a class="btn ghost" href="#deals">Packages</a>
 </div>
 
 <footer class="footer">
@@ -365,5 +349,6 @@ li{margin:.25rem 0}
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
