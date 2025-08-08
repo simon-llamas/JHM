@@ -6,13 +6,13 @@
 <title>Joy Healthy Massage – Fort Worth</title>
 <meta name="description" content="Joy Healthy Massage in Fort Worth, TX. Full body and foot massage with clear benefits—reduce tension, improve circulation, and feel better. Family plans, corporate packs, and gift vouchers." />
 <style>
+/* —— Brand palette —— */
 :root{
   --ink:#1f1f3a;
-  --royal:#4038b8;
-  --heart:#e5533d;
-  --leaf:#1c9a64;
-  --teal:#2db2a0;
-  --bg:#fffdf9;
+  --royal:#1b75bc;   /* outline & nav */
+  --heart:#e24434;   /* heart */
+  --leaf:#1aa26a;    /* leaves */
+  --bg:#fffdf9;      /* warm paper */
   --card:#ffffff;
   --beige:#f3ede5;
 }
@@ -22,12 +22,14 @@ html{scroll-behavior:smooth}
 body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--ink);line-height:1.6}
 a{color:inherit;text-decoration:none}
 
+/* Header */
 .header{background:var(--beige);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;border-bottom:1px solid #e6dfd6}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800}
 .brand svg{width:44px;height:44px}
 .brand span{font-size:1.1rem}
 nav a{margin-left:16px;font-weight:700}
 
+/* Hero */
 .hero{position:relative;overflow:hidden}
 .hero-inner{max-width:1100px;margin:0 auto;padding:44px 18px 18px;text-align:center}
 .hero h1{margin:0;font-size:clamp(28px,4vw,44px);color:var(--royal);letter-spacing:.4px}
@@ -36,13 +38,8 @@ nav a{margin-left:16px;font-weight:700}
 .btn{display:inline-block;font-weight:800;padding:12px 18px;border-radius:10px;border:2px solid var(--royal)}
 .btn.primary{background:var(--royal);color:#fff}
 .btn.ghost{background:#fff;color:var(--royal)}
-.hero::after{
-  content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;
-  background:
-    radial-gradient(1200px 600px at 80% -10%, var(--teal), transparent 60%),
-    radial-gradient(900px 500px at -10% 90%, var(--leaf), transparent 60%);
-}
 
+/* Layout */
 .container{max-width:1100px;margin:0 auto;padding:26px 18px}
 .section{margin:32px 0;scroll-margin-top:84px}
 h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
@@ -54,15 +51,18 @@ h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
 ul{margin:.5rem 0 .25rem 1.1rem}
 li{margin:.25rem 0}
 
+/* Prices */
 .prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .price-card h3{margin:.25rem 0 .35rem 0;color:var(--royal)}
 .rate{display:flex;justify-content:space-between;border-bottom:1px dashed #d9d6f2;padding:6px 0;color:var(--royal);font-weight:800}
 .note{font-size:.9rem;color:#666;margin-top:8px}
 
+/* Packages */
 .packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
 .pkg .title{font-weight:800;color:var(--royal);margin:0 0 .35rem}
 .badge{display:inline-block;background:#fff;border:1px solid #dcd8f7;border-radius:999px;padding:6px 10px;color:var(--royal);font-weight:800}
 
+/* Footer & sticky actions */
 .footer{background:var(--beige);border-top:1px solid #e6dfd6;text-align:center;padding:22px;color:#41416a}
 .sticky{position:fixed;right:16px;bottom:16px;display:flex;gap:10px;flex-wrap:wrap;z-index:30}
 .map{border:0;width:100%;height:320px;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08)}
@@ -72,27 +72,29 @@ li{margin:.25rem 0}
 
 <header class="header">
   <a class="brand" href="#top" aria-label="Joy Healthy Massage">
-    <!-- Enhanced cleaned-up logo -->
+    <!-- Preferred Logo -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
-      <defs>
-        <linearGradient id="heartG" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#f46952"/>
-          <stop offset="1" stop-color="#e24434"/>
-        </linearGradient>
-        <linearGradient id="leafG" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#1aa26a"/>
-          <stop offset="1" stop-color="#138a57"/>
-        </linearGradient>
-      </defs>
-      <g fill="none" stroke="#4038b8" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
-        <path fill="url(#heartG)"
-          d="M110 22 C124 6,152 8,162 28 c10 19-2 40-26 55 c-11 7-19 10-26 14 c-7-4-15-7-26-14 C60 68,48 47,58 28 c10-20,38-22,52-6Z"/>
-        <path fill="url(#leafG)"
-          d="M86 70 c-20-4-36 2-52 16 c22 6 39 4 60-6 c6-3 4-8-8-10Z"/>
-        <path fill="url(#leafG)"
-          d="M134 70 c20-4 36 2 52 16 c-22 6-39 4-60-6 c-6-3-4-8 8-10Z"/>
-        <ellipse cx="110" cy="86" rx="14" ry="7.6" fill="#2db2a0"/>
-      </g>
+        <!-- Heart -->
+        <path d="M110 22
+                 C124 6,152 8,162 28
+                 c10 19-2 40-26 55
+                 c-11 7-19 10-26 14
+                 c-7-4-15-7-26-14
+                 C60 68,48 47,58 28
+                 c10-20,38-22,52-6Z"
+              fill="#e24434" stroke="#1b75bc" stroke-width="4"/>
+        <!-- Left leaf -->
+        <path d="M86 70
+                 c-20-4-36 2-52 16
+                 c22 6 39 4 60-6
+                 c6-3 4-8-8-10Z"
+              fill="#1aa26a" stroke="#1b75bc" stroke-width="3"/>
+        <!-- Right leaf -->
+        <path d="M134 70
+                 c20-4 36 2 52 16
+                 c-22 6-39 4-60-6
+                 c-6-3-4-8 8-10Z"
+              fill="#1aa26a" stroke="#1b75bc" stroke-width="3"/>
     </svg>
     <span>Joy Healthy Massage</span>
   </a>
@@ -203,13 +205,14 @@ li{margin:.25rem 0}
         <p><strong>Address:</strong> 2760 Airport Fwy, Fort Worth, TX 76111</p>
         <p><strong>Hours:</strong> Mon–Sun: 9:00 AM – 8:00 PM</p>
         <iframe class="map" loading="lazy" allowfullscreen
-          src="https://www.google.com/maps?q=2760%20Airport%20Fwy%2C%20Fort%20Worth%2C%20TX%2076111&output=embed">
+          src="https://www.google.com/maps?q=2760%20Airport%20Fwy,%20Fort%20Worth,%20TX%2076111&output=embed">
         </iframe>
       </div>
     </section>
   </div>
 </main>
 
+<!-- sticky actions -->
 <div class="sticky">
   <a class="btn primary" href="tel:+18177143333">Call Now</a>
   <a class="btn ghost" href="#deals">Packages</a>
