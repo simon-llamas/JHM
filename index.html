@@ -6,87 +6,122 @@
 <title>Joy Healthy Massage – Fort Worth</title>
 <meta name="description" content="Joy Healthy Massage in Fort Worth, TX. Full body and foot massage with clear benefits—reduce tension, improve circulation, and feel better. Family plans, corporate packs, and gift vouchers." />
 <style>
+/* —— Brand palette —— */
 :root{
   --ink:#1f1f3a;
-  --royal:#2a2680;   /* deeper blue/purple */
-  --heart:#d94b39;   /* softened red */
-  --leaf:#1a8d5d;    /* toned down green */
-  --teal:#2db2a0;
-  --bg:#fffdf9;
+  --royal:#4038b8;   /* deep blue/purple */
+  --heart:#d54335;   /* softened red to harmonize with royal */
+  --leaf:#17885a;    /* toned green to sit nicely with royal */
+  --bg:#fffdf9;      /* warm paper */
   --card:#ffffff;
   --beige:#f3ede5;
 }
+
+/* Base */
 *{box-sizing:border-box}
 html,body{margin:0}
 html{scroll-behavior:smooth}
-body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--ink);line-height:1.6}
+body{
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.6;
+  position:relative;
+}
+/* Soft color on page sides so the hero fade doesn’t feel cut off */
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+  background:
+    radial-gradient(40% 100% at -10% 50%, rgba(64,56,184,.07), transparent 60%),
+    radial-gradient(40% 100% at 110% 50%, rgba(64,56,184,.07), transparent 60%);
+}
+
 a{color:inherit;text-decoration:none}
 
 /* Header */
-.header{background:var(--beige);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;border-bottom:1px solid #e6dfd6}
-.brand{display:flex;align-items:center;gap:8px;font-weight:800}
-.brand svg{width:44px;height:44px}
-.brand span{font-size:1.05rem;letter-spacing:-0.5px} /* tighter spacing */
-nav a{margin-left:16px;font-weight:700}
+.header{
+  background:var(--beige);
+  padding:14px 18px;
+  display:flex; justify-content:space-between; align-items:center;
+  position:sticky; top:0; z-index:10;
+  border-bottom:1px solid #e6dfd6;
+}
+.brand{
+  display:flex; align-items:center; gap:8px; font-weight:800;
+}
+.brand svg{width:44px; height:44px}
+.brand span{
+  font-size:1.05rem;
+  display:flex; align-items:center;
+  gap:4px;                 /* tighter */
+  letter-spacing:-0.3px;   /* tighter */
+}
+nav a{margin-left:16px; font-weight:700}
 
 /* Hero */
-.hero{position:relative;overflow:hidden}
-.hero-inner{max-width:1100px;margin:0 auto;padding:44px 18px 18px;text-align:center}
-.hero h1{margin:0;font-size:clamp(28px,4vw,44px);color:var(--royal);letter-spacing:-0.5px}
-.hero h1 .heart-text{color:var(--heart)}
-.hero h1 .dot{color:var(--leaf)}
-.hero h1 .healthy{color:var(--heart)}
-.hero h1 .massage{color:var(--royal)}
-.hero p{max-width:760px;margin:10px auto 18px}
-.ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-block;font-weight:800;padding:12px 18px;border-radius:10px;border:2px solid var(--royal)}
-.btn.primary{background:var(--royal);color:#fff}
-.btn.ghost{background:#fff;color:var(--royal)}
+.hero{position:relative; overflow:hidden}
+.hero-inner{
+  max-width:1100px; margin:0 auto; padding:44px 18px 18px; text-align:center; position:relative; z-index:1;
+}
+.hero h1{
+  margin:0; font-size:clamp(28px,4vw,44px); letter-spacing:-.4px; /* tighter */
+}
+.hero .joy, .hero .healthy{color:var(--heart); font-weight:800}
+.hero .dot{color:var(--leaf); margin:0 4px}
+.hero .massage{color:var(--royal); font-weight:800}
+.hero p{max-width:760px; margin:10px auto 18px}
+.ctas{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
+.btn{display:inline-block; font-weight:800; padding:12px 18px; border-radius:10px; border:2px solid var(--royal)}
+.btn.primary{background:var(--royal); color:#fff}
+.btn.ghost{background:#fff; color:var(--royal)}
+/* Blue → lighter blue fade (no green) */
 .hero::after{
-  content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.2; z-index:0;
   background:
-    radial-gradient(1200px 600px at 80% -10%, var(--teal), transparent 60%),
-    radial-gradient(900px 500px at -10% 90%, var(--leaf), transparent 60%);
+    radial-gradient(1200px 600px at 80% -10%, rgba(64,56,184,.25), transparent 60%),
+    radial-gradient(900px 500px at -10% 90%, rgba(64,56,184,.18), transparent 60%);
 }
 
 /* Layout */
-.container{max-width:1100px;margin:0 auto;padding:26px 18px}
-.section{margin:32px 0;scroll-margin-top:84px}
-h2{margin:0 0 8px;font-size:clamp(22px,3vw,32px);color:var(--royal)}
-.divider{height:2px;background:var(--royal);opacity:.25;margin:10px 0 16px;border-radius:2px}
-.grid{display:grid;gap:16px}
+.container{max-width:1100px; margin:0 auto; padding:26px 18px}
+.section{margin:32px 0; scroll-margin-top:84px}
+h2{margin:0 0 8px; font-size:clamp(22px,3vw,32px); color:var(--royal)}
+.divider{height:2px; background:var(--royal); opacity:.25; margin:10px 0 16px; border-radius:2px}
+.grid{display:grid; gap:16px}
 .grid.services{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--card);border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:16px}
-.small{font-size:.96rem;color:#4a4a6a}
+.card{background:var(--card); border-radius:14px; box-shadow:0 1px 6px rgba(0,0,0,.08); padding:16px}
+.small{font-size:.96rem; color:#4a4a6a}
 ul{margin:.5rem 0 .25rem 1.1rem}
 li{margin:.25rem 0}
 
-/* Colored section backgrounds */
-.section-bg{background:var(--beige);padding:26px 18px;border-radius:12px}
+/* Light section backgrounds to ground content */
+.section-bg{background:var(--beige); padding:26px 18px; border-radius:12px}
 
 /* Prices */
-.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.price-card h3{margin:.25rem 0 .35rem 0;color:var(--royal)}
-.rate{display:flex;justify-content:space-between;border-bottom:1px dashed #d9d6f2;padding:6px 0;color:var(--royal);font-weight:800}
-.note{font-size:.9rem;color:#666;margin-top:8px}
+.prices{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
+.price-card h3{margin:.25rem 0 .35rem 0; color:var(--royal)}
+.rate{display:flex; justify-content:space-between; border-bottom:1px dashed #d9d6f2; padding:6px 0; color:var(--royal); font-weight:800}
+.note{font-size:.9rem; color:#666; margin-top:8px}
 
 /* Packages */
-.packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.pkg .title{font-weight:800;color:var(--royal);margin:0 0 .35rem}
-.badge{display:inline-block;background:#fff;border:1px solid #dcd8f7;border-radius:999px;padding:6px 10px;color:var(--royal);font-weight:800}
+.packages{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
+.pkg .title{font-weight:800; color:var(--royal); margin:0 0 .35rem}
+.badge{display:inline-block; background:#fff; border:1px solid #dcd8f7; border-radius:999px; padding:6px 10px; color:var(--royal); font-weight:800}
 
 /* Footer & sticky actions */
-.footer{background:var(--beige);border-top:1px solid #e6dfd6;text-align:center;padding:22px;color:#41416a}
-.sticky{position:fixed;right:16px;bottom:16px;display:flex;gap:10px;flex-wrap:wrap;z-index:30}
-.map{border:0;width:100%;height:320px;border-radius:12px;box-shadow:0 1px 6px rgba(0,0,0,.08)}
+.footer{background:var(--beige); border-top:1px solid #e6dfd6; text-align:center; padding:22px; color:#41416a}
+.sticky{position:fixed; right:16px; bottom:16px; display:flex; gap:10px; flex-wrap:wrap; z-index:30}
+.map{border:0; width:100%; height:320px; border-radius:12px; box-shadow:0 1px 6px rgba(0,0,0,.08)}
 </style>
 </head>
 <body>
 
 <header class="header">
   <a class="brand" href="#top" aria-label="Joy Healthy Massage">
-    <!-- Updated Logo -->
+    <!-- Logo: leaves bigger and starting from bottom of heart -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" aria-hidden="true" focusable="false">
+      <!-- Heart -->
       <path d="M110 22
                C124 6,152 8,162 28
                c10 19-2 40-26 55
@@ -94,19 +129,26 @@ li{margin:.25rem 0}
                c-7-4-15-7-26-14
                C60 68,48 47,58 28
                c10-20,38-22,52-6Z"
-            fill="var(--heart)" stroke="var(--royal)" stroke-width="3.5"/>
-      <path d="M86 70
-               c-20-4-36 2-52 16
-               c22 6 39 4 60-6
-               c6-3 4-8-8-10Z"
+            fill="var(--heart)" stroke="var(--royal)" stroke-width="4"/>
+      <!-- Left leaf from base, larger -->
+      <path d="M100 96
+               c-22 2-39 11-55 26
+               c24 2 45-2 66-12
+               c7-4 5-10-11-14Z"
             fill="var(--leaf)" stroke="var(--royal)" stroke-width="3"/>
-      <path d="M134 70
-               c20-4 36 2 52 16
-               c-22 6-39 4-60-6
-               c-6-3-4-8 8-10Z"
+      <!-- Right leaf from base, larger -->
+      <path d="M120 96
+               c22 2 39 11 55 26
+               c-24 2-45-2-66-12
+               c-7-4-5-10 11-14Z"
             fill="var(--leaf)" stroke="var(--royal)" stroke-width="3"/>
     </svg>
-    <span><span style="color:var(--heart)">Joy</span><span style="color:var(--leaf)"> • </span><span style="color:var(--heart)">Healthy</span> <span style="color:var(--royal)">Massage</span></span>
+    <span>
+      <span style="color:var(--heart)">Joy</span>
+      <span style="color:var(--leaf)">•</span>
+      <span style="color:var(--heart)">Healthy</span>
+      <span style="color:var(--royal)">Massage</span>
+    </span>
   </a>
   <nav>
     <a href="#services">Services</a>
@@ -120,7 +162,12 @@ li{margin:.25rem 0}
 <main id="top">
   <section class="hero">
     <div class="hero-inner">
-      <h1><span class="heart-text">Joy</span><span class="dot"> • </span><span class="healthy">Healthy</span> <span class="massage">Massage</span></h1>
+      <h1>
+        <span class="joy">Joy</span>
+        <span class="dot">•</span>
+        <span class="healthy">Healthy</span>
+        <span class="massage">Massage</span>
+      </h1>
       <p>Feel better: reduce tension, improve circulation, increase mobility, and walk out more comfortable.</p>
       <div class="ctas">
         <a class="btn primary" href="tel:+18177143333">Call (817) 714-3333</a>
@@ -222,6 +269,7 @@ li{margin:.25rem 0}
   </div>
 </main>
 
+<!-- sticky actions -->
 <div class="sticky">
   <a class="btn primary" href="tel:+18177143333">Call Now</a>
   <a class="btn ghost" href="#deals">Packages</a>
