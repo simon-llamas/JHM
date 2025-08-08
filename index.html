@@ -13,9 +13,10 @@
   --leaf:#17885a;
   --bg:#fffdf9;
   --card:#ffffff;
-  --beige:#f8ecea; /* pinkish beige */
+  --beige:#f5e8dd; /* warm soft beige header */
 }
 
+/* Base */
 *{box-sizing:border-box}
 html,body{margin:0}
 html{scroll-behavior:smooth}
@@ -26,6 +27,7 @@ body{
   line-height:1.6;
   position:relative;
 }
+/* Green to blue fade on sides, lighter in center */
 body::before {
   content: "";
   position: fixed;
@@ -33,20 +35,21 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(44% 100% at -12% 50%, rgba(23, 136, 90, 0.14), transparent 62%),
-    radial-gradient(44% 100% at 112% 50%, rgba(23, 136, 90, 0.14), transparent 62%),
+    radial-gradient(44% 100% at -12% 50%, rgba(23, 136, 90, 0.16), transparent 62%),
+    radial-gradient(44% 100% at 112% 50%, rgba(64, 56, 184, 0.16), transparent 62%),
     linear-gradient(90deg,
       rgba(23, 136, 90, 0) 0%,
       rgba(23, 136, 90, 0) 32%,
-      rgba(23, 136, 90, 0) 68%,
-      rgba(23, 136, 90, 0) 100%
+      rgba(64, 56, 184, 0) 68%,
+      rgba(64, 56, 184, 0) 100%
     ),
-    linear-gradient(to bottom, rgba(23, 136, 90, 0.04) 0%, rgba(23, 136, 90, 0) 55%);
+    linear-gradient(to bottom, rgba(23,136,90,0.04) 0%, rgba(64,56,184,0) 55%);
 }
 
 a{color:inherit;text-decoration:none}
 .brand, .brand *, nav a, .reviews a { text-decoration:none; color:inherit }
 
+/* Header */
 .header{
   background:var(--beige);
   padding:14px 18px;
@@ -67,6 +70,7 @@ a{color:inherit;text-decoration:none}
 .brand .massage{color:var(--royal)}
 nav a{margin-left:16px; font-weight:700}
 
+/* Hero */
 .hero{position:relative}
 .hero-inner{
   max-width:1100px; margin:0 auto; padding:44px 18px 18px; text-align:center; position:relative; z-index:1;
@@ -75,7 +79,7 @@ nav a{margin-left:16px; font-weight:700}
   margin:0; font-size:clamp(28px,4vw,44px); letter-spacing:-.4px;
 }
 .hero .joy, .hero .healthy{color:var(--heart); font-weight:800}
-.hero .dot{color:var(--leaf); margin:0 1px;} /* reduced horizontal gap */
+.hero .dot{color:var(--leaf); margin:0 1.5px;}
 .hero .massage{color:var(--royal); font-weight:800}
 .hero p{max-width:760px; margin:10px auto 18px}
 .ctas{display:flex; gap:10px; justify-content:center; flex-wrap:wrap}
@@ -83,6 +87,31 @@ nav a{margin-left:16px; font-weight:700}
 .btn.primary{background:var(--royal); color:#fff}
 .btn.ghost{background:#fff; color:var(--royal)}
 
+/* Yelp 5-star bubble */
+.badge {
+  display: inline-block;
+  background: var(--royal);
+  color: white;
+  font-weight: 800;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.badge:hover,
+.badge:focus {
+  background-color: #2e2a85;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Layout */
 .container{max-width:1100px; margin:0 auto; padding:26px 18px}
 .section{margin:32px 0; scroll-margin-top:84px}
 h2{margin:0 0 8px; font-size:clamp(22px,3vw,32px); color:var(--royal)}
@@ -170,7 +199,7 @@ li{margin:.25rem 0}
         <a class="btn primary" href="tel:+18177143333">Call (817) 714-3333</a>
         <a class="btn ghost" href="#deals">See Packages & Deals</a>
       </div>
-      <a class="badge" target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth">
+      <a class="badge" target="_blank" rel="noopener" href="https://www.yelp.com/biz/joy-healthy-massage-fort-worth" aria-label="Visit Yelp page for Joy Healthy Massage">
         <span aria-hidden="true">★★★★★</span> 5-Star on Yelp — Local favorite
       </a>
     </div>
